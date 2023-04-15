@@ -41,12 +41,13 @@ def play(m):
 
 if __name__ == '__main__':
     total_money = 100
-    for i in range(0, 10, 1):
-        total_money += play(total_money)
+    initial_bet = 100
+    for m in range(0, 10):
+        total_money += play(initial_bet)
         if total_money <= 0:
             print("You are lose.")
             break
     
-        print("i=" + str(i), end="\t")
+        print("m=" + str(m), end="\t")
         print("total_money=" + str(total_money), end="\n")
             
